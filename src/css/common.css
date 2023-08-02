@@ -28,3 +28,65 @@ img {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.field {
+  text-align: center;
+  margin: 0 10px;
+}
+
+/* Обертка для горизонтального вирівнювання */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стилі для інпуту дати та кнопки */
+#datetime-picker {
+  font-size: 16px;
+  padding: 10px;
+}
+
+button[data-start] {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #060606;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button[data-start]:hover {
+  background-color: #384738;
+  color: red;
+}
+
+/* Стилі для таймера */
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  text-align: center;
+  margin: 0 10px;
+}
+
+.value {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+}
