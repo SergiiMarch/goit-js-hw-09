@@ -16,6 +16,7 @@ img {
   display: block;
   max-width: 100%;
 }
+
 .btn__color {
   text-align: center;
 }
@@ -31,62 +32,43 @@ img {
 
 .timer {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  gap: 15px;
   align-items: center;
-  height: 100vh;
-}
-.field {
-  text-align: center;
-  margin: 0 10px;
-}
-
-/* Обертка для горизонтального вирівнювання */
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Стилі для інпуту дати та кнопки */
-#datetime-picker {
-  font-size: 16px;
-  padding: 10px;
-}
-
-button[data-start] {
-  font-size: 16px;
-  padding: 10px 20px;
-  background-color: #060606;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-button[data-start]:hover {
-  background-color: #384738;
-  color: red;
-}
-
-/* Стилі для таймера */
-.timer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .field {
-  text-align: center;
-  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .value {
-  display: block;
   font-size: 30px;
-  font-weight: bold;
-  color: #333;
+  color: blueviolet;
 }
 
 .label {
-  font-size: 14px;
-  color: #666;
+  font-size: 20px;
+  color: black;
+}
+
+.input-value {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-value > button {
+  font-size: 17px;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#datetime-picker {
+  font-size: 15px;
+  padding: 10px 10px;
+  border: 2px solid black;
 }
