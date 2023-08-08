@@ -1,3 +1,7 @@
+const formEl = document.querySelector('.form');
+
+formEl.addEventListener('submit', onSubmit);
+
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
   if (shouldResolve) {
@@ -5,4 +9,8 @@ function createPromise(position, delay) {
   } else {
     // Reject
   }
+}
+
+function onSubmit(evt) {
+  evt.preventDefault();
 }
