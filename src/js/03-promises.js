@@ -25,6 +25,7 @@ function onSubmit(evt) {
   let amountEl = Number(formEl.elements.amount.value);
 
   if (delayForm <= 0 || stepForm <= 0 || amountEl <= 0) {
+    return Notiflix.Notify.failure(`Please enter the value more then zero`);
   }
   for (let i = 0; i < amountEl; i += 1) {
     createPromise(i + 1, delayForm + i * stepForm)
