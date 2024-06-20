@@ -28,6 +28,7 @@ function initForm() {
     persistedFilter = JSON.parse(persistedFilter);
     formEl.elements.email.value = persistedFilter.email || '';
     formEl.elements.message.value = persistedFilter.message || '';
+
     formData = persistedFilter;
   }
 }
@@ -38,8 +39,24 @@ formEl.addEventListener('input', handlerGetComment);
 
 function handlerGetComment(e) {
   e.preventDefault();
-
-  formData[e.target.name] = e.target.value;
+  formData[e.target.name] = e.target.value.trim();
   localStorage.setItem('LOCAL_KEY', JSON.stringify(formData));
 }
-console.log('hello');
+
+// formEl.addEventListener('submit', e => {
+//   e.preventDefault();
+//   const { email, message } = formData;
+
+//   if (!email || !message) {
+//     alert('Fill please all fields');
+//     return;
+//   }
+
+//   console.log('Submitted data:', formData);
+
+//   formEl.reset();
+
+//   localStorage.removeItem(LOCAL_KEY);
+
+//   formData = { email: '', message: '' };
+// });
