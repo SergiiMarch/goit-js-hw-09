@@ -20,7 +20,7 @@ let formData = {
   message: '',
 };
 
-const LOCAL_KEY = 'feedback_form_state';
+const LOCAL_KEY = 'feedback-form-state';
 
 function initForm() {
   let persistedFilter = localStorage.getItem(LOCAL_KEY);
@@ -40,23 +40,23 @@ formEl.addEventListener('input', handlerGetComment);
 function handlerGetComment(e) {
   e.preventDefault();
   formData[e.target.name] = e.target.value.trim();
-  localStorage.setItem('LOCAL_KEY', JSON.stringify(formData));
+  localStorage.setItem(LOCAL_KEY, JSON.stringify(formData));
 }
 
-// formEl.addEventListener('submit', e => {
-//   e.preventDefault();
-//   const { email, message } = formData;
+formEl.addEventListener('submit', e => {
+  e.preventDefault();
+  const { email, message } = formData;
 
-//   if (!email || !message) {
-//     alert('Fill please all fields');
-//     return;
-//   }
+  if (!email || !message) {
+    alert('Fill please all fields');
+    return;
+  }
+  console.log('formData:', formData);
 
-//   console.log('Submitted data:', formData);
-
-//   formEl.reset();
-
-//   localStorage.removeItem(LOCAL_KEY);
-
-//   formData = { email: '', message: '' };
-// });
+  localStorage.removeItem(LOCAL_KEY);
+  formEl.reset();
+  formData = {
+    email: '',
+    message: '',
+  };
+});
