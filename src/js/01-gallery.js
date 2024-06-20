@@ -88,8 +88,8 @@ const galleryMarkup = createElement(images);
 ulEl.insertAdjacentHTML('beforeend', galleryMarkup);
 
 const lightbox = new SimpleLightbox('.gallery a', {
-  captions: true, // Вмикаємо підписи
-  captionsData: 'alt', // Використовуємо атрибут 'alt' як джерело підпису
-  captionDelay: 250, // Затримка перед показом підпису в мілісекундах
-  overlayOpacity: 0.8, // Прозорість фону оверлея
+  captions: true,
+  captionsData: 'alt',
+  captionDelay: 250,
+  overlayOpacity: 0.8,
 });
